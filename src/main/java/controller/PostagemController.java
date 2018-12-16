@@ -46,7 +46,6 @@ public class PostagemController {
 			return postagemRepository.findById(postagemId)
 					.map(postagemInsert ->{
 						postagemInsert.setMessagem(postagemRequest.getMessagem());
-						postagemInsert.setDescricao(postagemRequest.getDescricao());
 						return postagemRepository.save(postagemInsert);
 
 					}).orElseThrow(() -> new ResourceAccessException("Postagem nao achado:" + postagemId));

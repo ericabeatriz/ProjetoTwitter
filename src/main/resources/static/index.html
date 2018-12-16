@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+   
+    <title>MAKE</title>
+    	<script type="text/javascript" src="/js/login.js"></script>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet=">
+    <style type="text/css">
+     
+body, html {
+    height: 100%;
+    background-repeat: no-repeat;
+    background-color: #7B68EE;
+}
+
+.card-container.card {
+    width: 350px;
+    padding: 40px 40px;
+    
+}
+
+.btn {
+    font-weight: 700;
+    height: 36px;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    user-select: none;
+    cursor: default;
+}
+
+
+.card {
+    background-color: #F7F7F7;
+    
+    padding: 20px 25px 30px;
+    margin: 0 auto 25px;
+    margin-top: 50px;
+   
+    -moz-border-radius: 2px;
+    -webkit-border-radius: 2px;
+    border-radius: 2px;
+    -moz-box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
+    -webkit-box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
+    box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
+}
+
+.profile-img-card {
+    width: 100px;
+    height: 96px;
+    margin: 0 auto 10px;
+    display: block;
+    -moz-border-radius: 50%;
+    -webkit-border-radius: 50%;
+    border-radius: 0;
+}
+
+
+.profile-name-card {
+    font-size: 16px;
+    font-weight: bold;
+    text-align: center;
+    margin: 10px 0 0;
+    min-height: 1em;
+}
+
+.reauth-email {
+    display: block;
+    color: #404040;
+    line-height: 2;
+    margin-bottom: 10px;
+    font-size: 14px;
+    text-align: center;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+.form-signin #inputEmail,
+.form-signin #inputPassword {
+    direction: ltr;
+    height: 44px;
+    font-size: 16px;
+}
+
+.form-signin input[type=email],
+.form-signin input[type=password],
+.form-signin input[type=text],
+.form-signin button {
+    width: 100%;
+    display: block;
+    margin-bottom: 10px;
+    z-index: 1;
+    position: relative;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+.form-signin .form-control:focus {
+    border-color: rgb(104, 145, 162);
+    outline: 0;
+    -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075),0 0 8px rgb(104, 145, 162);
+    box-shadow: inset 0 1px 1px rgba(0,0,0,.075),0 0 8px rgb(104, 145, 162);
+}
+
+.btn-signin {
+   
+    background-color: rgb(104, 145, 162);
+   
+    padding: 0px;
+    font-weight: 700;
+    font-size: 14px;
+    height: 36px;
+    -moz-border-radius: 3px;
+    -webkit-border-radius: 3px;
+    border-radius: 3px;
+    border: none;
+    -o-transition: all 0.218s;
+    -moz-transition: all 0.218s;
+    -webkit-transition: all 0.218s;
+    transition: all 0.218s;
+}
+
+.btn-signin:hover,
+.btn-signin:active,
+.btn-signin:focus {
+    background-color: rgb(12, 97, 33);
+}
+
+.forgot-password {
+    color: rgb(104, 145, 162);
+}
+
+.forgot-password:hover,
+.forgot-password:active,
+.forgot-password:focus{
+    color: rgb(12, 97, 33);
+}
+    </style>
+    <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+</head>
+<body>
+
+    <div class="container">
+        <div class="card card-container">
+        	<a href="postagem.html">
+           	 <img id="profile-img" class="profile-img-card" src="data:image/jpeg;base64,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" />
+            </a>
+
+                <span id="reauth-email" class="reauth-email"></span>
+                <h4>Nome: </h4>
+                <input type="text" id="nome" class="form-control" placeholder="Login" required>
+                <h4>Senha :</h4>
+                <input type="text" id="senha" class="form-control" placeholder="Senha" required>
+                <input type="button" value="Enviar" onclick="clicando()"/>
+                
+                <a href="postagem.html">
+            	    <button class="btn btn-lg btn-primary btn-block btn-signin" > Página Principal </button>
+                </a>
+
+           
+        </div>
+    </div>
+
+
+  </table>
+</div>
+<script type="text/javascript">
+$( document ).ready(function() {
+    
+    loadProfile();
+});
+
+
+function getLocalProfile(callback){
+    var profileImgSrc      = localStorage.getItem("PROFILE_IMG_SRC");
+    var profileName        = localStorage.getItem("PROFILE_NAME");
+    var profileReAuthEmail = localStorage.getItem("PROFILE_REAUTH_EMAIL");
+
+    if(profileName !== null
+            && profileReAuthEmail !== null
+            && profileImgSrc !== null) {
+        callback(profileImgSrc, profileName, profileReAuthEmail);
+    }
+}
+
+
+function loadProfile() {
+    if(!supportsHTML5Storage()) { return false; }
+    
+    getLocalProfile(function(profileImgSrc, profileName, profileReAuthEmail) {
+       
+        $("#profile-img").attr("src",profileImgSrc);
+        $("#profile-name").html(profileName);
+        $("#reauth-email").html(profileReAuthEmail);
+        $("#inputEmail").hide();
+        $("#remember").hide();
+    });
+}
+
+
+function supportsHTML5Storage() {
+    try {
+        return 'localStorage' in window && window['localStorage'] !== null;
+    } catch (e) {
+        return false;
+    }
+}
+
+
+function testLocalStorageData() {
+    if(!supportsHTML5Storage()) { return false; }
+    localStorage.setItem("PROFILE_IMG_SRC", "//lh3.googleusercontent.com/-6V8xOA6M7BA/AAAAAAAAAAI/AAAAAAAAAAA/rzlHcD0KYwo/photo.jpg?sz=120" );
+    localStorage.setItem("PROFILE_NAME", "César Izquierdo Tello");
+    localStorage.setItem("PROFILE_REAUTH_EMAIL", "oneaccount@gmail.com");
+}
+</script>
+</body>
+</html>

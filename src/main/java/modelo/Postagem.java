@@ -13,10 +13,8 @@ public class Postagem {
 	private Integer id;
 	@Column
 	private String messagem;
-	@Column
-	private String descricao;
 	
-	public Postagem() {
+		public Postagem() {
 		
 	}
 	
@@ -32,13 +30,7 @@ public class Postagem {
 	public void setMessagem(String messagem) {
 		this.messagem = messagem;
 	}
-	public String getDescricao() {
-		return descricao;
-	}
-	public void setDescricao(String descricao) {
-		this.descricao = descricao;
-	}
-	
+		
 
 	
 	
